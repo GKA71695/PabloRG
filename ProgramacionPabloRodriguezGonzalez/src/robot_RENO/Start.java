@@ -5,13 +5,20 @@ public class Start {
 	public static void main(String[] args) {
 		// Batallas de robots. R.E.N.O.
 
-		Robot r2d2 = new Robot("",0,0);
-		r2d2.setNombre("r2d2");
-		r2d2.setVida(85);
-		r2d2.setAtaque(15);
+		Robot r2d2 = new Robot("");
+		r2d2.setNombre("R2D2");
+		r2d2.vidaInicio();
+		r2d2.generarAtaque();
 		r2d2.generarDefensa();
 		
+		Robot c3po = new Robot("");
+		c3po.setNombre("C3PO");
+		c3po.vidaInicio();
+		c3po.generarAtaque();
+		c3po.generarDefensa();
+		
 		System.out.println(r2d2);
+		System.out.println(c3po);
 		
 	}
 
