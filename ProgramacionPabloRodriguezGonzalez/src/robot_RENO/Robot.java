@@ -3,19 +3,21 @@ package robot_RENO;
 public class Robot {
 	
 	//Atributos
-	private String nombre;
-	private int vida;
-	private int ataque;
-	private int defensa;
+	protected String nombre;
+	protected int vida;
+	protected int ataque;
+	protected int defensa;
 	
 	
 	//Constructor parametrizado
 	public Robot(String nombre) {
 		this.nombre = nombre;
-		this.vida = vidaInicio();
-		this.ataque = generarAtaque();
-		this.defensa = generarDefensa();
+		this.vida = 100;
+		this.ataque = (int)(Math.random()*100);
+		this.defensa = (int)(Math.random()*100);
 	}
+	
+	
 	
 	
 	//Constructor Copia
@@ -55,70 +57,62 @@ public class Robot {
 	}
 	
 	
-	//Vida por defecto a 100
-	public int vidaInicio() {
-		
-		this.vida = 100;
-		
-		return vida;
-	}
+	
+//	//Operación para generar un ataque aleatorio entre 0 y 100.
+//	public int generarAtaque() {
+//			
+//		int ataqueValido, devolver = 0;
+//		ataqueValido = (int)(Math.random()*100);
+//			
+//		if(ataqueValido <= 100 && ataqueValido >= 0) {
+//				
+//			devolver = ataqueValido;
+//		}
+//			
+//		return devolver;
+//	}
 	
 	
-	//Operación para generar un ataque aleatorio entre 0 y 100.
-	public int generarAtaque() {
-			
-		int ataqueValido, devolver = 0;
-		ataqueValido = (int)(Math.random()*100);
-			
-		if(ataqueValido <= 100 && ataqueValido >= 0) {
-				
-			devolver = ataqueValido;
-		}
-			
-		return devolver;
-	}
+//	//Operación para generar una defensa aleatoria entre 0 y 100. 
+//	public int generarDefensa() {
+//		
+//		int defensaValida, devolver = 0;
+//		defensaValida = (int)(Math.random()*100);
+//		
+//		if(defensaValida <= 100 && defensaValida >= 0) {
+//			
+//			devolver = defensaValida;
+//		}
+//		
+//		return devolver;
+//	}
+//	
 	
-	
-	//Operación para generar una defensa aleatoria entre 0 y 100. 
-	public int generarDefensa() {
-		
-		int defensaValida, devolver = 0;
-		defensaValida = (int)(Math.random()*100);
-		
-		if(defensaValida <= 100 && defensaValida >= 0) {
-			
-			devolver = defensaValida;
-		}
-		
-		return devolver;
-	}
-	
-	
-	//Operación para la "lucha" de robots.
-	public Robot lucha(Robot ataca) {
-		
-		Robot devolver = new Robot(this);
-		
-		
-		
-			if(devolver.vida > 0) {
-				
-				if(ataca.ataque > devolver.defensa) {
-					
-					devolver.vida = this.vida - ataca.ataque;
-					
-					if(devolver.vida < 0) {
-						
-						devolver.vida = 0;
-					}
-				}
-			}
-			
-
-
-		return devolver;
-	}
-	
+//	//Operación para la "lucha" de robots.
+//	public Robot lucha(Robot ataca) {
+//		
+//		Robot devolver = new Robot(this);
+//		
+//		
+//		
+//			if(devolver.vida > 0) {
+//				
+//				if(ataca.ataque > devolver.defensa) {
+//					
+//					devolver.vida = this.vida - ataca.ataque;
+//					
+//					if(devolver.vida < 0) {
+//						
+//						devolver.vida = 0;
+//					}
+//				}
+//			}
+//			
+//
+//
+//		return devolver;
+//	}
+//	
 	
 	@Override
 	public String toString() {

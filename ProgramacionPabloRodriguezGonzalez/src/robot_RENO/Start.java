@@ -21,7 +21,7 @@ public class Start {
 		System.out.println(r2d2);
 		System.out.println(c3po);
 		
-		Robot turno1 = r2d2.lucha(c3po);
+		/*Robot turno1 = r2d2.lucha(c3po);
 		Robot turno2 = c3po.lucha(r2d2);
 		Robot turno3 = turno1.lucha(turno2);
 		Robot turno4 = turno2.lucha(turno3);
@@ -30,7 +30,14 @@ public class Start {
 		System.out.println(turno1);
 		System.out.println(turno2);
 		System.out.println(turno3);
-		System.out.println(turno4);
+		System.out.println(turno4);*/
+		
+
+		Robot ganador = Batalla.luchar(r2d2, c3po);
+		System.out.println(ganador);
+		
+		
+		
 	}
 
 }
